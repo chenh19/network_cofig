@@ -19,6 +19,8 @@ case "$choice" in
         [ ! -f anyconnect.zip ] && wget -q https://www.dropbox.com/s/o4a5so0at8tev76/anyconnect.zip?dl=0 -O anyconnect.zip && echo '"Cisco Anyconnet client" deb package is downloaded.' && sleep 5 #_to_be_updated
         unzip -o -q anyconnect.zip -d ./anyconnect/ && sleep 1 && rm -f anyconnect.zip && sleep 1
         sudo apt-get install ./anyconnect/cisco-anyconnect*.deb -y && sleep 1 && rm -rf ./anyconnect/
+        
+        # connect
         echo -e " \n${TEXT_YELLOW}Please connect to ${TEXT_GREEN}[vpn.uchicago.edu]${TEXT_YELLOW} or ${TEXT_GREEN}[vpn.illinois.edu]${TEXT_YELLOW} and disconnect, then close the VPN client to continue.${TEXT_RESET} \n" && sleep 1
         /opt/cisco/anyconnect/bin/vpnui
 
