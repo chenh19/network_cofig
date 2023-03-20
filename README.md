@@ -8,12 +8,5 @@
 ## How to setup
 - **Install:** connect to internet and execute the below command in terminal
 ```
-bash <(wget -qO- )
+bash <(wget -qO- https://raw.githubusercontent.com/chenh19/network_cofig/main/config.sh)
 ```
-
-- **Uninstall:** connect to internet and execute the below command in terminal  
-```
-bash <(wget -qO- )
-```
-
-## How to use
