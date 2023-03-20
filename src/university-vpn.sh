@@ -27,21 +27,3 @@ case "$choice" in
   * )   # notify cancellation
         echo -e " \n${TEXT_YELLOW}University VPN configuration skipped.${TEXT_RESET} \n" && sleep 5;;
 esac
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
