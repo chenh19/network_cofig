@@ -24,6 +24,7 @@ case "$choice" in
 
         # notify end
         echo -e " \n${TEXT_GREEN}University VPN configuration finished!${TEXT_RESET} \n" && sleep 1;;
+        
   * )   # notify cancellation
         echo -e " \n${TEXT_YELLOW}University VPN configuration skipped.${TEXT_RESET} \n" && sleep 1;;
 esac
