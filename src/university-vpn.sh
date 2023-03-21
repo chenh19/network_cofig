@@ -20,10 +20,15 @@ case "$choice" in
         unzip -o -q anyconnect.zip -d ./anyconnect/ && sleep 1 && rm -f anyconnect.zip && sleep 1
         sudo apt-get install ./anyconnect/cisco-anyconnect*.deb -y && sleep 1 && rm -rf ./anyconnect/
         
-        # connect
-        echo -e " \n${TEXT_YELLOW}Please connect to ${TEXT_GREEN}[vpn.uchicago.edu]${TEXT_YELLOW} or ${TEXT_GREEN}[vpn.illinois.edu]${TEXT_YELLOW} and disconnect, then close the VPN client to continue.${TEXT_RESET} \n" && sleep 1
-        /opt/cisco/anyconnect/bin/vpnui
-
+        # connect now
+        sudo echo ""
+        read -n1 -s -r -p "$(echo -e $TEXT_YELLOW'Would you like to connect to University VPN now [y/n/c]?'$TEXT_RESET)"$' \n' choice
+        case "$choice" in
+              y|Y ) echo -e " \n${TEXT_YELLOW}Please connect to ${TEXT_GREEN}[vpn.uchicago.edu]${TEXT_YELLOW} or ${TEXT_GREEN}[vpn.illinois.edu]${TEXT_YELLOW} and disconnect, then close the VPN client to continue.${TEXT_RESET} \n" && sleep 1
+                    /opt/cisco/anyconnect/bin/vpnui;;
+              * )   ;;
+        esac
+        
         # notify end
         echo -e " \n${TEXT_GREEN}University VPN configuration finished!${TEXT_RESET} \n" && sleep 1;;
         
