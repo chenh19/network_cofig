@@ -28,7 +28,7 @@ case "$choice" in
           [ ! -f /usr/share/applications/securew2.desktop ] && sudo touch /usr/share/applications/securew2.desktop
           sudo desktop-file-edit \
               --set-name 'University WiFi' --set-key 'Name[en_US]' --set-value 'University WiFi' --set-key 'Name[zh_CN]' --set-value '校园网WiFi' \
-              --set-generic-name 'Eduroam SecureW2' --set-key 'GenericName[en_US]' --set-value 'Eduroam SecureW2' --set-key 'GenericName[zh_CN]' --set-value 'Eduroam高校网络' \
+              --set-generic-name 'SecureW2 Eduroam' --set-key 'GenericName[en_US]' --set-value 'SecureW2 Eduroam' --set-key 'GenericName[zh_CN]' --set-value 'Eduroam高校网络' \
               --set-comment 'Secure world-wide roaming wireless service for universities' --set-key 'Comment[en_US]' --set-value 'Secure world-wide roaming wireless service for universities' --set-key 'Comment[zh_CN]' --set-value '安全的全球高校无线网络漫游服务' \
               --set-key 'Exec' --set-value 'bash /opt/eduroam/SecureW2/run.sh' \
               --set-icon '/opt/icon/securew2.png' \
