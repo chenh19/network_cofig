@@ -17,6 +17,11 @@ case "$choice" in
 
         # install mobile wwan
         sudo apt-get update && sudo apt-get install modem-manager-gui -y
+        [ ! -d ~/.config/modem-manager-gui/ ] && mkdir ~/.config/modem-manager-gui/
+        kwriteconfig5 --file ~/.config/modem-manager-gui/settings.conf --group settings --key behaviour_ask_to_hide "false"
+        kwriteconfig5 --file ~/.config/modem-manager-gui/settings.conf --group settings --key behaviour_hide_to_tray "true"
+        kwriteconfig5 --file ~/.config/modem-manager-gui/settings.conf --group settings --key window_hide_notify_shown "true"
+        kwriteconfig5 --file ~/.config/modem-manager-gui/settings.conf --group settings --key behaviour_ask_to_hide "false"
         
         # connect now
         sudo echo ""
