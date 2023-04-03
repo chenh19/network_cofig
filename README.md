@@ -1,5 +1,5 @@
 # Network Configuration Tool
-*Current version: v1.0.2*
+*Current version: v1.0.5*
 
 ## Introduction
 - This tool is intended for network configuration using command line tools.
