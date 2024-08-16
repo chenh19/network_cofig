@@ -1,5 +1,5 @@
 # Network Configuration Tool
-*Current version: v1.0.6*
+*Current version: v1.0.7*
 
 ## Introduction
 This tool is intended for network configuration, including:
